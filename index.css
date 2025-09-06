@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+html {
+    height: 100%;
+}
+
 body{
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: "Anton", sans-serif;
     background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main{
+    flex-grow: 1;
 }
 
 .contenedor-1{
@@ -47,6 +61,7 @@ width: 100%;
     color: #fbff2a;
     font-size: 100px;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 .contenedor-1 h2{
@@ -54,4 +69,27 @@ width: 100%;
     color: white;
     font-size: 40px;
     text-align: center;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 576px){
+    .contenedor-1{
+        height: 700px;
+    }
+    .contenedor-1::before{
+        background-position: center;
+        mask-image: linear-gradient(to bottom, black 60%, rgba(0,0,0,0.5) 70%, transparent 90%);
+    }
+    .contenedor-1 .logo{
+        top: -5%;
+    }
+    .contenedor-1 .info-cliente{
+        top: 40%;
+    }
+    .contenedor-1 h1{
+        font-size: 50px;
+    }
+    .contenedor-1 h2{
+        font-size: 20px;
+    }
 }
