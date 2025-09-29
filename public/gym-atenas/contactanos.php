@@ -10,6 +10,9 @@ include(SHARED_PATH . "/elementos/head-vcard/head.php");
     <main>
         <?php include("elementos/header.html");?>
         <link rel="stylesheet" href="elementos/header.css">
+        <link rel="stylesheet" href="elementos/contactanos.css">
+
+        
         
     </main>
 
