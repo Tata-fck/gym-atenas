@@ -1,0 +1,43 @@
+<header>
+    <div class="info-header">
+        <img src="img/logo.png" alt="Gym Atenas Logo">
+        <div class="contenedor-info">
+            <h1>ATENAS INDUSTRIA GYM</h1>
+            <p class="subtitulo-logo">"La Casa de los Dioses"</p>
+        </div>
+
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="menu-open">&#9776;</span>
+                <span class="menu-close">&times;</span>
+            </label>
+
+            <div class="menu-items" id="menu-items">
+                <a href="index.php" class="activo">Principal</a>
+                <a href="nosotros.php">Nosotros</a>
+                <a href="servicios.php">Servicios</a>
+                <a href="suplementos.php">Suplementos & Más</a>
+                <a href="ubicacion.php">Ubicacion & Horario</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+    const menuIcon = document.querySelector('.menu-icon');
+
+    menuIcon.addEventListener('click', function() {
+        menuItems.classList.toggle('active');
+    });
+
+    menuItems.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            menuItems.classList.remove('active');
+        });
+    });
+});
+</script>

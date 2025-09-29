@@ -1,0 +1,87 @@
+.contenedor-1 {
+  width: 70%;
+  margin: 0 auto;       /* Centra horizontalmente */
+  height: 100%;
+  position: relative;
+  color: white;
+  text-align: center;   /* Centra el texto */
+}
+
+.separador {
+  height: 120px;
+}
+
+.seccion-ubicacion h1 {
+  font-size: 4em;
+  letter-spacing: 10px;
+  margin: 0 auto;
+}
+
+.seccion-texto-1 {
+  font-family: 'Avenir';
+  width: 90%;
+  margin: 50px auto;
+}
+
+.seccion-texto-1 span {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  background: url('../img/ubicacion-icon.svg') no-repeat left center;
+  padding-left: 2em;
+}
+
+.seccion-contenido {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  letter-spacing: 20px;
+}
+
+.color-resaltado {
+  color: red;
+}
+
+.seccion-texto-2 {
+  font-size: 1.5em;
+  font-family: 'Avenir';
+}
+.seccion-texto-2 b{
+    font-size: 1.3em;
+}
+
+.seccion-texto-2 span {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 3rem; /* espacio para las flechas */
+}
+
+.seccion-texto-2 span::before,
+.seccion-texto-2 span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* centra verticalmente */
+  width: 3rem;
+  height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.seccion-texto-2 span::before {
+  left: -5px;
+  background-image: url('../img/flecha-r.svg');
+}
+
+.seccion-texto-2 span::after {
+  right: -5px;
+  background-image: url('../img/flecha-l.svg');
+}
+
+
+@media (max-width: 576px) {
+  .contenedor-1 {
+    width: 95%;
+  }
+}

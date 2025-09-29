@@ -1,0 +1,80 @@
+.contenedor-1{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fbff2a;
+  text-align: center; /* Centra todo el texto dentro de la sección */
+}
+
+
+.contenedor-1::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: url('../img/fondo-6.png') repeat;
+  background-size: cover;
+  background-position: center 25%;
+  mask-image: linear-gradient(to left, black 80%, rgba(0,0,0,0.5) 90%, transparent 95%),
+              linear-gradient(to bottom, black 80%, rgba(0,0,0,0.5) 90%, transparent 99%),
+              linear-gradient(to right, black 80%, rgba(0,0,0,0.5) 90%, transparent 95%);
+              mask-composite: intersect;
+  filter: brightness(0.3);
+  z-index: -1;
+}
+
+.separador{
+  height: 95px;
+}
+
+.seccion-suplementos {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.seccion-suplementos h1{
+    font-size: 3em;
+    margin: 20px 5% 20px 5%;
+}
+
+.seccion-texto-1,
+.seccion-texto-2{
+  width: 100%;
+  height: auto;
+}
+
+.seccion-texto-1 p,
+.seccion-texto-2 p{
+  font-family: avenir;
+  font-size: 1.3em; /* Un tamaño más pequeño para el párrafo */
+  line-height: 1.6; /* Mejora la legibilidad con un interlineado mayor */
+  margin-bottom: 20px;
+  color: white;
+  margin: 50px auto; 
+}
+
+.seccion-contenido {
+  font-size: 1.4em;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .contenedor-1::before{
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to bottom, black 95%, rgba(0,0,0,0.5) 97.5%, transparent 99%);
+    background-position: 30% 70%;
+  }
+  .separador{
+    height: 120px;
+  }
+  .seccion-contenido{
+    padding: 0 20px 20px 20px;
+    width: 90%;
+  }
+}
